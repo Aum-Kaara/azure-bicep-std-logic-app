@@ -1,5 +1,3 @@
-Here’s a clean and professional **README.md** format for your **Logic App Standard Infrastructure Bicep deployment** — perfect for including in a GitHub repo 👇
-
 ---
 
 # 🧱 Azure Logic App Standard Infrastructure — Bicep Deployment
@@ -12,9 +10,9 @@ It provisions all required components including the Logic App, App Service Plan,
 ## 📁 Folder Structure
 
 ```
-├── infra/
+├── iac/
 │   ├── logicapp-standard.bicep         # Main Bicep template
-│   ├── logicapp.parameters.json        # Parameters file
+│   ├── logicapp-standard.parameters.json        # Parameters file
 │   └── README.md                       # This file
 ├── workflows/
 │   └── sample-workflow.json            # Optional Logic App workflow definition
@@ -48,14 +46,16 @@ Before deploying:
 
 ## 🧩 Parameters
 
-| Parameter            | Description                    | Example                                    |
-| -------------------- | ------------------------------ | ------------------------------------------ |
-| `logicAppName`       | Name of the Logic App Standard | `my-logicapp-standard`                     |
-| `location`           | Azure region for deployment    | `eastus`                                   |
-| `skuName`            | App Service Plan SKU           | `WS1`                                      |
-| `storageAccountName` | Storage account name           | `mystandardlogicstorage`                   |
-| `appInsightsName`    | Application Insights name      | `mylogicappinsights`                       |
-| `tags`               | Tags for all resources         | `{ "env": "dev", "owner": "integration" }` |
+| Parameter         | Description                           | Example    |
+| ----------------- | ------------------------------------- | ---------- |
+| `app`             | Application name                      | `advice`   |
+| `env`             | Deployment environment                | `dev`      |
+| `project`         | Project or business unit identifier   | `lab`      |
+| `regionCode`      | Short code for Azure region           | `centind`  |
+| `resourceType`    | Type of resource being deployed       | `logicapp` |
+| `functionRuntime` | Runtime stack for Logic App/Functions | `dotnet`   |
+| `functionVersion` | Function runtime version              | `~4`       |
+
 
 ---
 
